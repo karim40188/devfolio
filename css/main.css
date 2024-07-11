@@ -1,0 +1,406 @@
+
+
+/* global */
+:root{
+  --bg-color:tomato;
+}
+
+
+
+
+
+body {
+  height: 200vh;
+  background-color: #eee;
+  overflow: hidden;
+}
+/* Class For Background Properities */
+.backgroundProperties {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Navbar */
+nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: black;
+  color: white !important;
+  z-index: 999;
+}
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 400ms;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Header */
+
+header {
+  background-image: url(./assets/hero-bg.jpg);
+  height: 100vh;
+  transition:all 3s;
+}
+
+header .title {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+header .title::after {
+  content: "";
+  animation: typing 5s infinite ease-in-out;
+}
+
+.home-content h1 {
+  font-size: 70px;
+}
+
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  2% {
+    content: "D|";
+  }
+  4% {
+    content: "De|";
+  }
+  6% {
+    content: "Dev|";
+  }
+  8% {
+    content: "Deve|";
+  }
+  10% {
+    content: "Devel|";
+  }
+  12% {
+    content: "Develo|";
+  }
+  14% {
+    content: "Develop|";
+  }
+  16% {
+    content: "Develope|";
+  }
+  18% {
+    content: "Developer|";
+  }
+
+  30% {
+    content: "Develope|";
+  }
+  32% {
+    content: "Develop|";
+  }
+  34% {
+    content: "Develo|";
+  }
+  36% {
+    content: "Devel|";
+  }
+  38% {
+    content: "Dev|";
+  }
+  40% {
+    content: "DE|";
+  }
+  42% {
+    content: "|";
+  }
+  60% {
+    content: "|";
+  }
+  62% {
+    content: "F|";
+  }
+  64% {
+    content: "Fr|";
+  }
+  66% {
+    content: "Fre|";
+  }
+  68% {
+    content: "Free|";
+  }
+  70% {
+    content: "Freel|";
+  }
+  72% {
+    content: "Freela|";
+  }
+  74% {
+    content: "Freelan|";
+  }
+  76% {
+    content: "Freelanc|";
+  }
+  78% {
+    content: "Freelance|";
+  }
+  80% {
+    content: "Freelancer|";
+  }
+  82% {
+    content: "Freelance|";
+  }
+  84% {
+    content: "Freelanc|";
+  }
+  86% {
+    content: "Freelan|";
+  }
+  88% {
+    content: "Freela|";
+  }
+  90% {
+    content: "Freel|";
+  }
+  92% {
+    content: "Free|";
+  }
+  94% {
+    content: "Fre|";
+  }
+  96% {
+    content: "Fr|";
+  }
+  98% {
+    content: "F|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+/* Services */
+.services i {
+  font-size: 30px !important;
+  transition: border 400ms;
+  border: 9px solid #0078ff !important;
+}
+.services i:hover {
+  background-color: #0078ff;
+  border: 9px solid #74b5ff !important;
+}
+
+/* Features */
+.features {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 120, 255, 0.7),
+      rgba(0, 120, 255, 0.7)
+    ),
+    url(./assets/counters-bg.jpg);
+
+  width: 100%;
+}
+.features i {
+  font-size: 30px;
+  border: 9px solid #74b5ff;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* Porfolio */
+.portfolio button {
+  border: 4px solid #0078ff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 16px;
+  transition: all 400ms;
+  font-size: 12px;
+  width: 40px;
+  height: 40px;
+}
+.portfolio button:hover {
+  border: none;
+  background-color: #fff;
+}
+
+.line {
+  background-color: #0078ff;
+  position: absolute;
+  width: 56px;
+  height: 4px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+}
+
+/* Clients Carousel */
+.clients {
+  height: 80vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 120, 255, 0.7),
+      rgba(0, 120, 255, 0.7)
+    ),
+    url(./assets/overlay-bg.jpg);
+}
+.carousel-indicators {
+  top: 100%;
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+/* blog */
+
+.blog .card-footer img {
+  width: 50px;
+}
+
+.blog .card {
+  position: relative;
+}
+
+.blog .card-img {
+  overflow: hidden;
+}
+.blog .card-img:hover img {
+  transform: scale(1.1);
+  transition: all 400ms;
+}
+
+/* Contact */
+
+.contact {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 120, 255, 0.7),
+      rgba(0, 120, 255, 0.7)
+    ),
+    url(./assets/overlay-bg.jpg);
+}
+
+textarea {
+  height: 200px;
+}
+
+.contact ul.social-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.contact ul.social-icons li {
+  width: 30px;
+  height: 30px;
+}
+
+/* footer */
+
+footer {
+  background-color: #0062d3;
+}
+.arrow {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.layer {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display:none; */
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  --_c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--_c) top, var(--_c) left, var(--_c) right, var(--_c) bottom;
+  background-size: 12px 12px;
+  animation: l7 1s infinite;
+}
+@keyframes l7 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+
+.green {
+  background: green;
+}
+.red {
+  background: red;
+}
+.blue {
+  background: blue;
+}
+.orange {
+  background: orange;
+}
+
+
+
+.parent-options{
+  position: fixed;
+  top:250px;
+  left:0;
+  z-index: 9999;
+  display:flex;
+}
+
+.options{
+  background-color: tomato;
+  padding:20px;
+  position:relative;
+
+}
+
+
+.options span {
+  width:20px;
+  height:20px;
+  display:inline-block;
+}
+.setting-icon {
+position:absolute;
+left:100%;
+
+}
+
+
+.imges img{
+width:20px;
+text-align: center;
+}
+svg{
+  width:100%;
+  
+}
